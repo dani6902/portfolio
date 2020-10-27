@@ -10,7 +10,7 @@ $tekstfarve: #3d3a3a;
 @mixin bodymix($width,$height,$color,$style){
 
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
 h1 {
   color: $tekstfarve;
 }
@@ -22,13 +22,8 @@ section {width: 100%; float:left;
 #pageC {background: $trifarve}
 #pageD {background: $forfarve}
 
-.logode {
-  width: auto;
-  height: 20%;
-}
 
 *{
-  font-family: Raleway;
   padding: 0;
   margin: 0;
   text-decoration: none;
@@ -39,14 +34,23 @@ section {width: 100%; float:left;
 
 /*header navbar*/
 
-nav {
-  background: rgb(133,205,202);
-  background: linear-gradient(90deg, rgba(133,205,202,1) 0%, rgba(195,141,158,0.6001751042213761) 80%);
+.navbar {
   width: 100%;
   position: fixed;
   z-index: 20;
+  font-family: 'Ubuntu', sans-serif;
 }
-
+.navbar.sticky{
+  width: 100%;
+  background: linear-gradient(90deg, rgba(133,205,202,1) 0%, rgba(195,141,158,0.6001751042213761) 80%);
+}
+.navbar .logo a span{
+  color: white;
+}
+.navbar.sticky .logo a span{
+  color: darkred;
+  transition: all 0.5s ease;
+}
 label.logo {
   font-size: 35px;
   line-height: 80px;
@@ -54,18 +58,18 @@ label.logo {
   font-weight: bold;
 }
 
-nav ul {
+.navbar ul {
   float: right;
   margin-right: 20px;
 }
 
-nav ul li {
+.navbar ul li {
   display: inline-block;
   line-height: 80px;
   margin: 0 5px;
 }
 
-  nav ul li a {
+  .navbar ul li a {
   font-size: 20px;
   padding: 7px 13px;
   border-radius: 3px;
@@ -88,7 +92,11 @@ a:active,a:hover{
 #check {
   display: none;
 }
-
+@media (max-width: 1104px){
+  .home .max-width{
+    margin-left: 0px;
+  }
+}
 @media (max-width: 952px) {
   label.logo{
     font-size: 30px;
@@ -102,15 +110,16 @@ nav ul li a{
   .checkbtn{
     display: block;
     }
-    ul{
+    .ul_navbar{
       position: fixed;
       width: 100%;
-      height:100vh;
+      height:10vh;
       background: darken($secfarve, 10%);
       top: 80px;
       right: -120%;
       text-align: center;
       transition: all .5s;
+      display: inline-block;
     }
     nav ul li{
       display: block;
@@ -134,24 +143,38 @@ html {
 
 /* første side A*/
 #pageA {
-
+display: flex;
+height: 100vh;
+background-size: cover;
+background-attachment: fixed;
+min-height: 500px;
+font-family: 'Ubuntu', sans-serif;
 }
 
-.logode {
-  width: 20%;
-  height: auto;
-  position: relative;
-  bottom: 370px;
-  z-index: 2;
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
 }
 
-.profilbillede {
-  position: relative;
-  left: 50%;
-  width: auto;
-  height: 700px;
-  top: 5px;
-  z-index: 2;
+#pageA .max-width{
+  margin: auto 0 auto 40px;
+}
+#pageA .start-content .tekst-1{
+  font-size: 27px;
+}
+#pageA .start-content .tekst-2{
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+#pageA .start-content .tekst-3{
+  font-size: 40px;
+  margin: 5px 0;
+}
+#pageA .start-content .tekst-3 span{
+  color: $secfarve;
+  font-weight: 500;
 }
 
 /* sektionmedbaggrund og infomation om mig*/
