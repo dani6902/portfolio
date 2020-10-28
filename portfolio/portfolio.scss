@@ -19,7 +19,7 @@ section {width: 100%; float:left;
 }
  /* background lag*/
 #pageA {background: $prifarve}
-#pageC {background: $trifarve}
+#pageB {background: $trifarve}
 #pageD {background: $forfarve}
 
 
@@ -77,7 +77,8 @@ label.logo {
 }
 
   .ul_navbar li a:active,a:hover{
-  background-color: lighten($secfarve, 10%);
+  background-color: none;
+  color: $secfarve;
   transition: .5s;
 }
 
@@ -93,9 +94,17 @@ label.logo {
 #check {
   display: none;
 }
-@media (max-width: 1104px){
+@media (max-width: 1300px){
   .home .max-width{
     margin-left: 0px;
+  }
+}
+@media (max-width: 1104px){
+  #pageB .about-content .left img{
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 6px;
   }
 }
 @media (max-width: 952px) {
@@ -130,6 +139,20 @@ nav ul li a{
     #check:checked ~ ul{
       left: 0;
       z-index: 20;
+    }
+  .max-width{
+    max-width: 800px;
+  }
+    #pageB .about-content .kolonne{
+      width: 100%;
+    }
+    #pageB .about-content .venstre{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 60px;
+    }
+    #pageB .about-content .hojre{
+      flex: 100%;
     }
   }
 /* stillstående baggrund*/
@@ -194,26 +217,88 @@ transition: all 0.3 ease;
   background: none;
 }
 /* sektionmedbaggrund og infomation om mig*/
-.testdiv {
-  width: 500px;
-  height: 700px;
-  background: $femfarve;
-}
 
-.pageB{
+
+#pageB{
   font-family: 'Poppins', sans-serif;
   padding: 100px 0;
 }
-.pageB .tittle{
+#pageB .title{
+  position: relative;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
   font-size: 40px;
   font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
 }
- .ommigbillede {
+
+#pageB .title::before{
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 3px;
+  left: 50%;
+  bottom: 0px;
+  background: #111;
+  transform: translateX(-50%);
+}
+#pageB .title::after{
+  content: "Og mine færdigheder";
+  position: absolute;
+  padding: 5px;
+  left: 50%;
+  bottom: -15px;
+  color: crimson;
+  background: $trifarve;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+ #pageB .about-content .venstre img {
   height: 400px;
   width: 400px;
   object-fit: cover;
+  border-radius: 6px;
+}
+ #pageB .about-content{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+ }
+ #pageB .about-content .venstre {
+   width: 45%;
+ }
+ #pageB .about-content .hojre {
+   width: 55%;
+ }
+
+#pageB .about-content .hojre .tekstommig {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#pageB .about-content .hojre .tekstommig span{
+  color: crimson;
+}
+#pageB .about-content .hojre p{
+  text-align: justify;
+}
+#pageB .about-content .hojre a{
+  display: inline-block;
+  background: orange;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid orange;
+  transition: all 0.3 ease;
+}
+#pageB .about-content .hojre a:hover{
+  color: orange;
+  background: none;
 }
 
 /* billede gallery med grid*/
