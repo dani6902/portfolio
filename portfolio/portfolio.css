@@ -179,6 +179,21 @@ html {
   height: 700px;
   background: #85CDCA; }
 
+.pageB {
+  font-family: 'Poppins', sans-serif;
+  padding: 100px 0; }
+
+.pageB .tittle {
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500; }
+
+.ommigbillede {
+  height: 400px;
+  width: 400px;
+  object-fit: cover; }
+
 /* billede gallery med grid*/
 .item1 {
   grid-area: billede1; }
