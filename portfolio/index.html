@@ -6,6 +6,9 @@
     <script src="portfolio.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
     <title>Daniel Ejlersen Portfolio</title>
   </head>
   <body>
@@ -54,37 +57,92 @@
 </section>
 
 <section id="pageC">
-  <h1>D.E.</h1>
-  <h2>Portfolio</h2>
-  <li>
-    <a href="#"> Mit Projekt 1</a>
-  </li>
-
-    <div class="gridbox">
-      <button class="se-palle" data-href="#myModal23" data-slide="prev"> Se palle </button>
-      <div id="myModal23" class="modal">
-        <!-- popup content-->
-          <div class="infoknap-content">
-            <span class="close">&times;</span>
-            <h2> Visionlisering af din palle</h2>
-            <img class="infografi" src="#" alt="Knap der viser kontekt omkirng projekter">
+  <div class="max-width">
+      <h2 class="title">Mine projekter</h2>
+      <div class="carousel owl-carousel">
+        <div class="kort">
+          <div class="box">
+            <img src="billeder/profilbillede_udenbaggrund.png" alt="billede af Odense Glasværk">
+            <div class="tekst">Odense Glasværk projekt</div>
+            <p>I samarbejde med Odense Glasværk lavede jeg og min gruppe en optimering af deres hjemmeside</p>
           </div>
+        </div>
+        <div class="kort">
+          <div class="box">
+            <img src="billeder/profilbillede_udenbaggrund.png" alt="billede af Odense Glasværk">
+            <div class="tekst">Odense Glasværk projekt</div>
+            <p>I samarbejde med Odense Glasværk lavede jeg og min gruppe en optimering af deres hjemmeside</p>
+          </div>
+        </div>
+        <div class="kort">
+          <div class="box">
+            <img src="billeder/profilbillede_udenbaggrund.png" alt="billede af Odense Glasværk">
+            <div class="tekst">Odense Glasværk projekt</div>
+            <p>I samarbejde med Odense Glasværk lavede jeg og min gruppe en optimering af deres hjemmeside</p>
+          </div>
+        </div>
+        <div class="kort">
+          <div class="box">
+            <img src="billeder/profilbillede_udenbaggrund.png" alt="billede af Odense Glasværk">
+            <div class="tekst">Odense Glasværk projekt</div>
+            <p>I samarbejde med Odense Glasværk lavede jeg og min gruppe en optimering af deres hjemmeside</p>
+          </div>
+        </div>
       </div>
-      <img src="billeder/profilbillede_udenbaggrund.png" class="griditem">
-      <img src="billeder/profilbillede_udenbaggrund.png" class="griditem">
-      <img src="billeder/profilbillede_udenbaggrund.png" class="griditem">
-    </div>
-</section>
-
-<section id="pageD">
-  <h1>D.E.</h1>
-  <h2>Portfolio</h2>
-
-  <div class="block">
-    <img src="billeder/profilbillede_udenbaggrund.png" data-speed="-1" class="img-parallax">
-    <h2>Parallax Speed -1</h2>
   </div>
 
+
+</section>
+
+<section id="pageD" class="kontakt">
+  <div class="max-width">
+    <h2 class="title">Kontakt mig</h2>
+    <div class="kolonne venstre">
+      <div class="kontakt-kontekt">
+        <div class="tekst">hej kontakt mig her</div>
+        <p>bla bla bla bla lba lba lba lba bla bla bla blabla bla bla bla lba lba lba lba bla bla bla bla bla bla bla bla lba lba lba lba bla bla bla bla  </p>
+        <div class="ikoner">
+          <div class="row">
+            <i class="fas fa-user"></i>
+            <div class="info">
+              <div class="head">Navn</div>
+              <div class="sub-title">Daniel Berg Ejlersen</div>
+            </div>
+          </div>
+          <div class="row">
+            <i class="fas fa-map-marker-alt"></i>
+            <div class="info">
+              <div class="head">Uddannelse adresse</div>
+              <div class="sub-title">Seebladsgade 1, 5000 Odense</div>
+            </div>
+          </div>
+          <div class="row">
+            <i class="fas fa-envelope"></i>
+            <div class="info">
+              <div class="head">Email</div>
+              <div class="sub-title">abc@gmail.com</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kolonne hojre">
+        <div class="tekst">Mail direkte til mig</div>
+        <form action="index.html">
+          <div class="field">
+            <div class="field navn">
+              <input type="text" placeholder="Navn">
+            </div>
+            <div class="field navn">
+              <input type="text" placeholder="Firma navn">
+            </div>
+            <div class="field navn">
+              <input type="text" placeholder="Email">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
   </body>
 </html>

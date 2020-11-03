@@ -350,4 +350,124 @@ html {
   text-decoration: none;
   cursor: pointer; }
 
+/* page C mine projekter*/
+#pageC .title {
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  margin-top: 70px; }
+
+#pageC, #pageD {
+  font-family: 'Poppins', sans-serif; }
+
+#pageC .carousel .kort {
+  background: #85CDCA;
+  border-radius: 6px;
+  padding: 25px 35px;
+  text-align: center;
+  transition: all 0.3s ease; }
+
+#pageC .carousel .kort img {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #E27d60;
+  transition: all 0.3s ease; }
+
+#pageC .carousel .kort .box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease; }
+
+#pageC .carousel .kort .tekst {
+  font-size: 25px;
+  font-weight: 500;
+  margin: 10px 0 7px 0; }
+
+#pageC .carousel .kort:hover {
+  background: #E27d60; }
+
+#pageC .carousel .kort:hover img {
+  border-color: #85CDCA; }
+
+#pageC .carousel .kort:hover .box {
+  transform: scale(1.05); }
+
+.owl-dots {
+  text-align: center;
+  margin-top: 20px; }
+
+.owl-dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 5px;
+  outline: none !important;
+  border-radius: 50%;
+  border: 2px solid #85CDCA !important;
+  transition: all 0.3s ease; }
+
+.owl-dot.active {
+  width: 35px;
+  border-radius: 14px; }
+
+.owl-dot.active,
+.owl-dot.hover {
+  background: #85CDCA !important; }
+
+/* kontakt siden*/
+#pageD .title {
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  margin-top: 70px; }
+
+.kontakt .kontakt-kontekt {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; }
+
+.kontakt .kontakt-kontekt .kolonne {
+  width: calc(50% - 30px); }
+
+.kontakt .kontakt-kontekt .tekst {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px; }
+
+.kontakt .kontakt-kontekt .left {
+  text-align: justify; }
+
+.kontakt .kontakt-kontekt .left .ikoner {
+  margin: 10px 0; }
+
+.kontakt .kontakt-kontekt .row {
+  display: flex;
+  height: 65px;
+  align-items: center; }
+
+.kontakt .kontakt-kontekt .row .info {
+  margin-left: 30px; }
+
+.kontakt .kontakt-kontekt .row .row i {
+  font-size: 25px;
+  color: #85CDCA; }
+
+.kontakt .kontakt-kontekt .info .head {
+  font-weight: 500; }
+
+.kontakt .kontakt-kontekt .info .sub-title {
+  color: #707070; }
+
 /*# sourceMappingURL=portfolio.css.map */
