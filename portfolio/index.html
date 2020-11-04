@@ -97,8 +97,8 @@
 <section id="pageD" class="kontakt">
   <div class="max-width">
     <h2 class="title">Kontakt mig</h2>
-    <div class="kolonne venstre">
-      <div class="kontakt-kontekt">
+    <div class="kontakt-kontekt">
+      <div class="kolonne venstre">
         <div class="tekst">hej kontakt mig her</div>
         <p>bla bla bla bla lba lba lba lba bla bla bla blabla bla bla bla lba lba lba lba bla bla bla bla bla bla bla bla lba lba lba lba bla bla bla bla  </p>
         <div class="ikoner">
@@ -125,19 +125,25 @@
           </div>
         </div>
       </div>
-      <div class="kolonne hojre">
-        <div class="tekst">Mail direkte til mig</div>
-        <form action="index.html">
-          <div class="field">
-            <div class="field navn">
-              <input type="text" placeholder="Navn">
-            </div>
-            <div class="field navn">
-              <input type="text" placeholder="Firma navn">
-            </div>
-            <div class="field navn">
-              <input type="text" placeholder="Email">
-            </div>
+    <div class="kolonne hojre">
+      <div class="tekst">Mail direkte til mig</div>
+      <form action="#">
+        <div class="fields">
+          <div class="field navn">
+            <input type="text" placeholder="Navn" required>
+          </div>
+          <div class="field email">
+            <input type="text" placeholder="Email" required>
+          </div>
+        </div>
+          <div class="field emne">
+            <input type="text" placeholder="Emne" required>
+          </div>
+          <div class="field tekstarial">
+            <textarea rows="10" cols="30" placeholder="Skriv besked her..." required></textarea>
+          </div>
+          <div class="knap">
+            <button type="submit">Send besked</button>
           </div>
         </form>
       </div>

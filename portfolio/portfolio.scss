@@ -457,7 +457,10 @@ transform: scale(1.05);
   padding-bottom: 20px;
   margin-top: 70px;
 }
-.kontakt .kontakt-kontekt {
+.kontakt .kontakt-kontekt .left p{
+  text-align: justify;
+}
+#pageD .kontakt-kontekt {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -485,13 +488,36 @@ transform: scale(1.05);
 .kontakt .kontakt-kontekt .row .info{
   margin-left: 30px;
 }
-.kontakt .kontakt-kontekt .row .row i{
+.kontakt .kontakt-kontekt .row i{
   font-size: 25px;
   color: $femfarve;
 }
 .kontakt .kontakt-kontekt .info .head{
   font-weight: 500;
 }
-.kontakt .kontakt-kontekt .info .sub-title{
+.kontakt .info .sub-title{
   color: $sortfarve;
+}
+.kontakt .hojre form .fields{
+  display: flex;
+}
+.kontakt .hojre form .fields,
+.kontakt .hojre form .fields .field{
+  height: 45px;
+  width: 100%;
+}
+.kontakt .right form .navn{
+  margin-right: 10px;
+}
+.kontakt .right form .email{
+  margin-left: 10px;
+}
+.kontakt .hojre form .fields input{
+  height: 100%;
+  width: 100%;
+  border: 1px solid $sortfarve;
+  border-radius: 6px;
+  padding: 0 15px;
+  font-size: 17px;
+  font-family: 'Poppins', sans-serif;
 }
