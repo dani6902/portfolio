@@ -26,7 +26,7 @@ $(document).ready(function(){
     loop: true
   });
   var typed = new Typed(".typing-2", {
-    strings: ["HTML5","CSS3","JavaScript","PHP","Jquery","Github"],
+    strings: ["HTML5","CSS3","JavaScript","PHP","Jquery","Github","Wordpress",],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
