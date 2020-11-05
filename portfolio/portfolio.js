@@ -7,7 +7,31 @@ $(document).ready(function(){
     }else{
       $('.navbar').removeClass("sticky");
     }
-  })
+    if(this.scrollY > 500){
+      $('.scroll-up-btn').addClass("show");
+    }else{
+      $('.scroll-up-btn').removeClass("show");
+    }
+  });
+
+  // slide-up script
+  $('.scroll-up-btn').click(function(){
+    $('html').animate({scrollTop: 0});
+  });
+  // skrive animation script
+  var typed = new Typed(".typing", {
+    strings: ["Multimediedesigner","Hårdtarbejdende","Designer","Teamplayer",],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+  });
+  var typed = new Typed(".typing-2", {
+    strings: ["HTML5","CSS3","JavaScript","PHP","Jquery","Github"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+  });
+
   // owl carousel script
   $('.carousel').owlCarousel({
     margin: 20,

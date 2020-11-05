@@ -14,7 +14,9 @@ $tekstfarve: #3d3a3a;
 h1 {
   color: $tekstfarve;
 }
-
+html{
+  scroll-behavior: smooth;
+}
 section {width: 100%; float:left;
 }
  /* background lag*/
@@ -30,9 +32,31 @@ section {width: 100%; float:left;
   list-style: none;
   box-sizing: border-box;
   color: $tekstfarve;
-  transition: all 0.5s ease;
 }
-
+/* scroll-up-btn*/
+.scroll-up-btn{
+position: fixed;
+height: 45px;
+width: 42px;
+background: $femfarve;
+right: 30px;
+bottom: 10px;
+text-align: center;
+line-height: 45px;
+color: $secfarve;
+z-index: 999;
+font-size: 30px;
+border-radius: 6px;
+cursor: pointer;
+opacity: 0;
+pointer-events: none;
+transition: all 0.3 ease;
+}
+.scroll-up-btn.show{
+  opacity: 1;
+  pointer-events: auto;
+  bottom: 30px;
+}
 /*header navbar*/
 
 .navbar {
@@ -155,15 +179,6 @@ nav ul li a{
       flex: 100%;
     }
   }
-/* stillstående baggrund*/
-
-html {
-  background: url(billeder/baggrundbilledetest.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
 
 /* første side A*/
 #pageA {
@@ -301,77 +316,14 @@ transition: all 0.3 ease;
   background: none;
 }
 
-/* billede gallery med grid*/
+/* stillstående baggrund*/
 
-.item1 { grid-area: billede1; }
-.item2 { grid-area: billede2; }
-.item3 { grid-area: billede3; }
-.item4 { grid-area: billede4; }
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'billede1 billede1 billede1 billede2 billede2 billede2'
-    'billede1 billede1 billede1 billede2 billede2 billede2'
-    'billede3 billede3 billede3 billede4 billede4 billede4';
-  grid-gap: 10px;
-  padding: 10px;
-}
-
-.grid-container > div {
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-}
-
-.modal-button {
-  width: 28px;
-  height: 28px;
-  background: url(img/infoknap.png);
-  background-repeat: no-repeat;
-  float:right;
-  border-radius: 100%;
-  text-decoration: none;
-}
-
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 99; /* Sit on top */
-  padding-top: 350px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.infoknap-content {
-  background-color: #fefefe;
-  margin: auto;
-  margin-top: -25%;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 95%;
-  z-index: 99;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+#pageC {
+  background: url(billeder/baggrundbilledetest.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 /* page C mine projekter*/
@@ -386,7 +338,7 @@ transition: all 0.3 ease;
   margin-top: 70px;
 }
 
-#pageC, #pageD{
+#pageC, #pageD, footer{
   font-family: 'Poppins', sans-serif;
 }
 #pageC .carousel .kort{
@@ -430,13 +382,14 @@ transform: scale(1.05);
   margin-top: 20px;
 }
 .owl-dot{
-  height: 13px;
-  width: 13px;
+  height: 20px;
+  width: 20px;
   margin: 0 5px;
   outline: none!important;
   border-radius: 50%;
   border: 2px solid $femfarve!important;
   transition: all 0.3s ease;
+  margin-bottom: 100px;
 }
 .owl-dot.active{
   width: 35px;
@@ -457,7 +410,7 @@ transform: scale(1.05);
   padding-bottom: 20px;
   margin-top: 70px;
 }
-.kontakt .kontakt-kontekt .left p{
+.kontakt .kontakt-kontekt .venstre p{
   text-align: justify;
 }
 #pageD .kontakt-kontekt {
@@ -474,11 +427,14 @@ transform: scale(1.05);
   font-weight: 600;
   margin-bottom: 10px;
 }
-.kontakt .kontakt-kontekt .left{
+.kontakt .kontakt-kontekt .venstre{
   text-align: justify;
 }
-.kontakt .kontakt-kontekt .left .ikoner{
+.kontakt .kontakt-kontekt .venstre .ikoner{
   margin: 10px 0;
+}
+.kontakt .venstre {
+  margin-bottom: 200px;
 }
 .kontakt .kontakt-kontekt .row{
   display: flex;
@@ -505,14 +461,22 @@ transform: scale(1.05);
 .kontakt .hojre form .fields .field{
   height: 45px;
   width: 100%;
+  margin-bottom: 15px;
 }
-.kontakt .right form .navn{
+.kontakt .hojre form .tekstarial{
+  height: 80px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.kontakt .hojre form .navn{
   margin-right: 10px;
 }
-.kontakt .right form .email{
+.kontakt .hojre form .email{
   margin-left: 10px;
 }
-.kontakt .hojre form .fields input{
+.kontakt .hojre form .field input,
+.kontakt .hojre form .tekstarial textarea{
   height: 100%;
   width: 100%;
   border: 1px solid $sortfarve;
@@ -520,4 +484,46 @@ transform: scale(1.05);
   padding: 0 15px;
   font-size: 17px;
   font-family: 'Poppins', sans-serif;
+  margin-bottom: 15px;
+}
+.kontakt .hojre form .tekstarial textarea{
+  padding-top: 10px;
+  resize: none;
+}
+
+.kontakt .hojre form .knap{
+  height: 47px;
+  width: 170px;
+  margin-bottom: 200px;
+}
+.kontakt .hojre form .knap button{
+  width: 100%;
+  height: 100%;
+  border: 2px solid $femfarve;
+  background: $femfarve;
+  color: $forfarve;
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3 ease;
+}
+.kontakt .hojre form .knap button:hover{
+  color: $femfarve;
+  background: none;
+}
+/* footer sektion*/
+
+footer{
+  background: $sortfarve;
+  padding: 20px 23px;
+  color: $prifarve;
+  text-align: center;
+}
+footer span a{
+  color: $femfarve;
+  text-decoration: none;
+}
+footer span a:hover{
+  text-decoration: underline;
 }
