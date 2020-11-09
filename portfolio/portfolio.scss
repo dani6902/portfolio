@@ -20,8 +20,8 @@ html{
 section {width: 100%; float:left;
 }
  /* background lag*/
-#pageA {background: $prifarve}
-#pageB {background: $sortfarve}
+#pageA {background: url(billeder/baggrundbilledesforside2.png);}
+#pageB {background: $prifarve}
 #pageD {background: $forfarve}
 
 
@@ -68,7 +68,7 @@ transition: all 0.3 ease;
 .navbar.sticky{
   width: 100%;
   background: rgb(18,27,38);
-background: linear-gradient(90deg, rgba(18,27,38,1) 0%, rgba(52,75,89,0.5046393557422969) 25%, rgba(46,131,242,1) 100%);
+  background: linear-gradient(90deg, rgba(18,27,38,1) 0%, rgba(52,75,89,0.5046393557422969) 100%);
 }
 .navbar .logo a span{
   color: white;
@@ -256,7 +256,7 @@ transition: all 0.3 ease;
   height: 3px;
   left: 50%;
   bottom: 0px;
-  background: $prifarve;
+  background: $tekstfarve;
   transform: translateX(-50%);
 }
 #pageB .title::after{
@@ -266,7 +266,7 @@ transition: all 0.3 ease;
   left: 50%;
   bottom: -15px;
   color: $tekstfarve;
-  background: $sortfarve;
+  background: $prifarve;
   transform: translateX(-50%);
   font-size: 20px;
 }
@@ -295,7 +295,7 @@ transition: all 0.3 ease;
   margin-bottom: 10px;
 }
 #pageB .about-content .hojre .tekstommig span{
-  color: $prifarve;
+  color: $secfarve;
 }
 #pageB .about-content .hojre p{
   text-align: justify;
@@ -320,7 +320,7 @@ transition: all 0.3 ease;
 /* stillstående baggrund*/
 
 #pageC {
-  background: url(billeder/baggrundbilledetest.jpg) no-repeat center center fixed;
+  background: url(billeder/baggrundbilledesprojekter.png) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -343,8 +343,8 @@ transition: all 0.3 ease;
   font-family: 'Poppins', sans-serif;
 }
 #pageC .carousel .kort{
-  background: $secfarve;
-  border-radius: 6px;
+  background: $prifarve;
+  border-radius: 25px;
   padding: 25px 35px;
   text-align: center;
   transition: all 0.3s ease;
@@ -502,9 +502,9 @@ transform: scale(1.05);
 .kontakt .hojre form .knap button{
   width: 100%;
   height: 100%;
-  border: 2px solid $femfarve;
-  background: $femfarve;
-  color: $forfarve;
+  border: 2px solid $trifarve;
+  background: $trifarve;
+  color: $tekstfarve;
   font-size: 20px;
   font-weight: 500;
   border-radius: 6px;
@@ -512,7 +512,7 @@ transform: scale(1.05);
   transition: all 0.3 ease;
 }
 .kontakt .hojre form .knap button:hover{
-  color: $femfarve;
+  color: $trifarve;
   background: none;
 }
 /* footer sektion*/
@@ -530,3 +530,4 @@ footer span a{
 footer span a:hover{
   text-decoration: underline;
 }
+/* Odense Glasværk siden*/
