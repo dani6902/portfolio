@@ -531,3 +531,84 @@ footer span a:hover{
   text-decoration: underline;
 }
 /* Odense Glasværk siden*/
+#pageD{
+  font-family: 'Poppins', sans-serif;
+  padding: 100px 0;
+}
+#pageD .title{
+  position: relative;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+#pageD .title::before{
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 3px;
+  left: 50%;
+  bottom: 0px;
+  background: $tekstfarve;
+  transform: translateX(-50%);
+}
+#pageD .title::after{
+  content: "Og mine færdigheder";
+  position: absolute;
+  padding: 5px;
+  left: 50%;
+  bottom: -15px;
+  color: $tekstfarve;
+  background: $prifarve;
+  transform: translateX(-50%);
+  font-size: 20px;
+}
+ #pageD .about-content .venstre img {
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+ #pageD .about-content{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+ }
+ #pageD .about-content .venstre {
+   width: 45%;
+ }
+ #pageB .about-content .hojre {
+   width: 55%;
+ }
+
+#pageD .about-content .hojre .tekstommig {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+#pageD .about-content .hojre .tekstommig span{
+  color: $secfarve;
+}
+#pageD .about-content .hojre p{
+  text-align: justify;
+}
+#pageD .about-content .hojre a{
+  display: inline-block;
+  background: $trifarve;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 30px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid $trifarve;
+  transition: all 0.3 ease;
+}
+#pageD .about-content .hojre a:hover{
+  color: $trifarve;
+  background: none;
+}
