@@ -20,13 +20,13 @@ $(document).ready(function(){
   });
   // skrive animation script
   var typed = new Typed(".typing", {
-    strings: ["Multimediedesigner","Hårdtarbejdende","Designer","Teamplayer",],
+    strings: ["Multimediedesigner","Hårdtarbejdende","Designer","Teamplayer","Innovativ"],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true
   });
   var typed = new Typed(".typing-2", {
-    strings: ["HTML5","CSS3","JavaScript","PHP","Jquery","Github","Wordpress",],
+    strings: ["HTML5","CSS3","JavaScript","PHP","Github","Wordpress",],
     typeSpeed: 100,
     backSpeed: 60,
     loop: true

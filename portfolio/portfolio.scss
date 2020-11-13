@@ -23,6 +23,7 @@ section {width: 100%; float:left;
 #pageA {background: url(billeder/baggrundbilledesforside2.png);}
 #pageB {background: $prifarve}
 #pageD {background: $forfarve}
+#pageE {background: $prifarve}
 
 
 *{
@@ -456,6 +457,9 @@ transform: scale(1.05);
   color: $sortfarve;
 }
 /* højre sektion */
+.kontakt .hojre form{
+  margin-top: 10px;
+}
 .kontakt .hojre form .fields{
   display: flex;
 }
@@ -531,11 +535,11 @@ footer span a:hover{
   text-decoration: underline;
 }
 /* Odense Glasværk siden*/
-#pageD{
+#pageE{
   font-family: 'Poppins', sans-serif;
   padding: 100px 0;
 }
-#pageD .title{
+#pageE .title{
   position: relative;
   font-family: 'Ubuntu', sans-serif;
   text-align: center;
@@ -545,7 +549,7 @@ footer span a:hover{
   padding-bottom: 20px;
 }
 
-#pageD .title::before{
+#pageE .title::before{
   content: "";
   position: absolute;
   width: 300px;
@@ -555,48 +559,19 @@ footer span a:hover{
   background: $tekstfarve;
   transform: translateX(-50%);
 }
-#pageD .title::after{
-  content: "Og mine færdigheder";
-  position: absolute;
-  padding: 5px;
-  left: 50%;
-  bottom: -15px;
-  color: $tekstfarve;
-  background: $prifarve;
-  transform: translateX(-50%);
-  font-size: 20px;
-}
- #pageD .about-content .venstre img {
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  border-radius: 6px;
-}
- #pageD .about-content{
-   display: flex;
-   flex-wrap: wrap;
-   align-items: center;
-   justify-content: space-between;
- }
- #pageD .about-content .venstre {
-   width: 45%;
- }
- #pageB .about-content .hojre {
-   width: 55%;
- }
 
-#pageD .about-content .hojre .tekstommig {
+#pageE .about-content .hojre .tekstommig {
   font-size: 25px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-#pageD .about-content .hojre .tekstommig span{
+#pageE .about-content .hojre .tekstommig span{
   color: $secfarve;
 }
-#pageD .about-content .hojre p{
+#pageE .about-content .hojre p{
   text-align: justify;
 }
-#pageD .about-content .hojre a{
+#pageE .about-content .hojre a{
   display: inline-block;
   background: $trifarve;
   color: #fff;
@@ -608,7 +583,39 @@ footer span a:hover{
   border: 2px solid $trifarve;
   transition: all 0.3 ease;
 }
-#pageD .about-content .hojre a:hover{
+#pageE .about-content .hojre a:hover{
   color: $trifarve;
   background: none;
+}
+#pageE .about-content .gallery img{
+  width: 100%;
+  height: auto;
+}
+#pageE .gallery {
+  border: 1px solid #ccc;
+    margin-top: 15px;
+}
+
+#pageE .gallery:hover {
+  border: 1px solid #777;
+}
+
+#pageE .gallery img {
+  width: 100%;
+  height: auto;
+}
+
+#pageE .desc {
+  padding: 15px;
+  text-align: center;
+}
+#pageE .about-content .responsive{
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+#pageE .about-content .resposive .gallery:after {
+  content: "";
+  display: table;
+  clear: both;
 }
